@@ -1,10 +1,8 @@
 package gena.spring.demo.controllers;
 
-import gena.spring.demo.services.GreetingServiceImpl;
+import gena.spring.demo.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SetterInjectionControllerTest {
 
@@ -12,7 +10,7 @@ class SetterInjectionControllerTest {
     @BeforeEach
     void setUp() {
         controller = new SetterInjectionController();
-        controller.setGreetingService(new GreetingServiceImpl());
+        controller.setGreetingService(new ConstructorGreetingService());
     }
 
     @Test
